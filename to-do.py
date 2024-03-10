@@ -31,6 +31,7 @@ while True:
             tarefa_nova = input("Digite a nova tarefa: \n")
             lista_tarefas.append(tarefa_nova)
             print(f"Tarefa: {tarefa_nova}, adicionada com sucesso!")
+            salvar_tarefas()
         elif(escolha == 2):
             exibir_tarefas()
             if(lista_tarefas == []):
@@ -41,6 +42,7 @@ while True:
             if(1 <= numero_tarefa <= len(lista_tarefas)):
                 tarefa_removida = lista_tarefas.pop(numero_tarefa -1)
                 print(f"Tarefa '{tarefa_removida}' removida com sucesso!")
+                salvar_tarefas()
             else:
                 print("Número de tarefa inválido!")
         elif(escolha == 4):
